@@ -45,7 +45,7 @@ CREATE TABLE `132_books_web_app`.`books` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(150) NOT NULL,
   `author` VARCHAR(150) NOT NULL,
-  ` abstract` TEXT(500) NOT NULL,
+  `abstract` TEXT(500) NOT NULL,
   `pages` SMALLINT NULL,
   `year` YEAR NULL,
   PRIMARY KEY (`id`));
