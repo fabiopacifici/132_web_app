@@ -72,5 +72,14 @@ ADD CONSTRAINT `reviews_book_id_foreign`
   ON UPDATE NO ACTION;
 
 
+INSERT INTO `132_books_web_app`.`books` (`id`, `title`, `author`, `abstract`, `pages`, `year`) VALUES
+(1, 'Il Signore degli Anelli', 'J.R.R. Tolkien', 'Un viaggiatore di nome Frodo deve portare un anello magico a Mordor per distruggerlo.', 1000, 1954),
+(2, '1984', 'George Orwell', 'In un futuro distopico, il governo controlla ogni aspetto della vita delle persone.', 300, 1949),
+(3, 'Il Cuore delle Tenebre', 'Stephen King', 'Un gruppo di amici si imbatte in un mostro nel cuore del Maine.', 500, 1983);
+
+INSERT INTO `132_books_web_app`.`reviews` (`id`, `book_id`, `username`, `date`, `review`, `vote`) VALUES
+(1, 1, 'Federico', '2022-01-01', 'Un libro fantastico che mi ha fatto pensare.', 5),
+(2, 2, 'Giovanni', '2022-02-01', 'Un libro distopico che mi ha dato fastidio.', 3),
+(3, 3, 'Luca', '2022-03-01', 'Un libro orrore che mi ha fatto paura.', 4);
 
 ```
