@@ -16,7 +16,7 @@ L'app Book Reviews App è un sistema di gestione dei libri che permette agli ute
 * Table: `books`
 * Table: `reviews`
 
-## Books Table
+### Books Table
 
 * id
 * title
@@ -25,7 +25,7 @@ L'app Book Reviews App è un sistema di gestione dei libri che permette agli ute
 * pages
 * year
 
-## Reviews Table
+### Reviews Table
 
 * id
 * book_id
@@ -34,7 +34,7 @@ L'app Book Reviews App è un sistema di gestione dei libri che permette agli ute
 * review
 * vote
 
-## Crete DB
+### Crete DB
 
 ```sql
 
@@ -83,3 +83,17 @@ INSERT INTO `132_books_web_app`.`reviews` (`id`, `book_id`, `username`, `date`, 
 (3, 3, 'Luca', '2022-03-01', 'Un libro orrore che mi ha fatto paura.', 4);
 
 ```
+
+## Next Steps
+
+1. Create db ER diagram.
+2. Create database and tables.
+3. API | create an node/express app  
+4. React | create a react app
+
+## API | create an node/express app  
+
+* creazione server express
+* definizione prima rotta
+* creazione file routes in routes/
+* installazione mysql2 per connesione al db
