@@ -2,16 +2,18 @@
 
 Un’app di recensione di `libri` in cui si possono lasciare `reviews` pubblici, aiutando gli utenti a scegliere il prossimo libro da leggere.
 
-## Descrizione
+## Backend
+
+### Descrizione
 
 L'app Book Reviews App è un sistema di gestione dei libri che permette agli utenti di lasciare recensioni pubbliche. Le recensioni possono essere lette e valutate dagli altri utenti, aiutando a creare una comunità di lettori.
 
-## Caratteristiche chiave
+### Caratteristiche chiave
 
 * Lasciare commenti pubblici sui libri
 * Gestione dei libri con sistema di votazione
 
-## Database
+### Database
 
 * Table: `books`
 * Table: `reviews`
@@ -84,16 +86,30 @@ INSERT INTO `132_books_web_app`.`reviews` (`id`, `book_id`, `username`, `date`, 
 
 ```
 
-## Next Steps
+### Next Steps
 
 1. Create db ER diagram.
 2. Create database and tables.
 3. API | create an node/express app  
 4. React | create a react app
 
-## API | create an node/express app  
+### API | create an node/express app  
 
 * creazione server express
 * definizione prima rotta
 * creazione file routes in routes/
 * installazione mysql2 per connesione al db
+
+## Frontend
+
+* install react app
+* install bootstrap bootstrap-icons
+* install react-router-dom
+* create react routers, layout and pages (React - Frontend)
+* create components for header, footer, bookslist, singleBookCard and reviewCard
+
+* install cors `npm install cors` (EXPRESS - Backend)
+* configure cors middleware (EXPRESS - Backend)
+
+* ReviewForm component (React - Frontend)
+* Endpoint API for reviewForm (Express - Backend)
