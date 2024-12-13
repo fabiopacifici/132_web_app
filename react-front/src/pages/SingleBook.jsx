@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import Banner from "../components/Banner"
 import ReviewCard from "../components/ReviewCard"
+import ReviewFormCard from "../components/ReviewFormCard"
 
 export default function SingleBook() {
   const { id } = useParams()
@@ -11,6 +12,7 @@ export default function SingleBook() {
   console.log(base_book_api_url);
 
   const [book, setBook] = useState(null);
+  const [success, setSuccess] = useState(null)
 
   useEffect(() => {
 
@@ -25,7 +27,7 @@ export default function SingleBook() {
 
       }).catch(err => console.error(err))
 
-  }, [])
+  }, [success])
 
 
   return (
@@ -34,6 +36,10 @@ export default function SingleBook() {
 
 
       <Banner title={book?.title} subtitle={`By ${book?.author}`} leadtext={book?.abstract} />
+
+
+      <ReviewFormCard book_id={id} />
+
 
       <section className="reviews">
         <div className="container">

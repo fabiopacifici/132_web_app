@@ -4,13 +4,15 @@ const BooksRouter = require('./routes/books');
 const NotFound = require('./middlewares/NotFound')
 const ServerErrorsHandler = require('./middlewares/ServerErrorsHandler')
 const cors = require('cors')
+
 const corsOptions = {
   origin: process.env.WEB_APP_FRONT_ORIGIN,
   optionsSuccessStatus: 200
 }
-console.log(corsOptions);
 
+server.use(express.json())
 server.use(cors(corsOptions));
+
 
 const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || '3001';
