@@ -28,34 +28,6 @@ export default function SingleBook() {
   }, [])
 
 
-
-  /*   const reviews = [
-      {
-        id: 1,
-        username: "Federico",
-        date: "2021-12-31T23:00:00.000Z",
-        review: "Un libro fantastico che mi ha fatto pensare.",
-        vote: 3
-  
-      },
-      {
-        id: 2,
-        username: "Manuel",
-        date: "2021-12-31T23:00:00.000Z",
-        review: "Un libro fantastico che mi ha fatto pensare.",
-        vote: 5
-  
-      },
-      {
-        id: 3,
-        username: "Giorgia",
-        date: "2021-12-31T23:00:00.000Z",
-        review: "Un libro fantastico che mi ha fatto pensare.",
-        vote: 2
-  
-      },
-    ] */
-
   return (
 
     <>
