@@ -24,7 +24,7 @@ function show(req, res) {
   const sql = `SELECT * FROM books WHERE id = ?`;
 
   // get all reviews for a book
-  const reviewsSql = `SELECT * FROM reviews WHERE book_id=?`
+  const reviewsSql = `SELECT * FROM reviews WHERE book_id=? ORDER BY id DESC`
 
 
   // get the book by the given id
