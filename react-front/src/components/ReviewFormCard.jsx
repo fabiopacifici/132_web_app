@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export default function ReviewFormCard({ book_id }) {
+export default function ReviewFormCard({ book_id, success, handleSuccess }) {
 
   const [username, setUsername] = useState('')
   const [review, setReview] = useState('')
   const [rating, setRating] = useState(0)
   const [errorMessage, setErrorMessage] = useState(null)
-  const [success, setSuccess] = useState(null)
+
 
 
   function HandleFormToggle() {
@@ -19,7 +19,7 @@ export default function ReviewFormCard({ book_id }) {
    * 
    */
   function HandleFormSubmit(e) {
-    //e.preventDefault()
+    e.preventDefault()
     //console.log('here');
 
 
@@ -55,30 +55,25 @@ export default function ReviewFormCard({ book_id }) {
           console.log(data);
 
           if (data.success) {
-            setSuccess('Thanks for your review')
+            handleSuccess('Thanks for your review')
 
+
+            // reset the form fields
+            setUsername('')
+            setReview('')
+            setRating(0)
 
             setTimeout(HandleFormToggle, 1000)
 
             // hide the success message after 2s
-            setTimeout(() => setSuccess(null), 3000)
+            setTimeout(() => handleSuccess(null), 3000)
             // hide the form after 3s
 
           }
 
-        }).finally(() => {
-          console.log(success);
-
-        })
-        .catch(err => console.log(err))
+        }).catch(err => console.log(err))
 
     }
-
-    // reset the form fields
-    setUsername('')
-    setReview('')
-    setRating(0)
-
   }
 
 

@@ -38,7 +38,7 @@ export default function SingleBook() {
       <Banner title={book?.title} subtitle={`By ${book?.author}`} leadtext={book?.abstract} />
 
 
-      <ReviewFormCard book_id={id} />
+      <ReviewFormCard book_id={id} success={success} handleSuccess={setSuccess} />
 
 
       <section className="reviews">
