@@ -57,7 +57,7 @@ function review(req, res) {
   const { username, review, vote } = req.body
   const now = new Date()
   console.log(now);
-  const reviewDate = `${now.getFullYear()}-${now.getMonth()}-${now.getDay()}`
+  const reviewDate = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
   console.log(reviewDate);
 
   // make a sql query
